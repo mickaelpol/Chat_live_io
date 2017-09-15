@@ -10,12 +10,12 @@ $(function(){
 
 	socket.on('message', function(msg){
 		console.log(msg);
-		$('#message').prepend('<p class="messageTexte"><strong>'+msg.user+ ' : </strong><div class="tet-primary">' + msg.message + '</div></p>');
+		$('#message').prepend('<p><strong class="text-primary">'+msg.user+ ' : </strong><span class="text-success">' + msg.message + '</span></p>');
 	});
 
 	socket.on('service-message', function(user){
 
-		$('#message').prepend('<strong><div class="messageUserco">'+user+' est en ligne !</div></strong>');
+		$('#message').prepend('<strong><div class="text-success">'+user+' est en ligne !</div></strong>');
 	});
 
 	$('#login').submit(function(e){

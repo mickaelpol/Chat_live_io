@@ -58,12 +58,3 @@ input[type=text] {
 .hidden {
 	display: none;
 }
-.messageTexte {
-	color: #0074AD; 
-}
-.messageUserco {
-	color: #00A23E;
-}
-/*#chatbox_bottom {
-        width:  0px !important;
-        }*/
