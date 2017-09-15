@@ -10,34 +10,8 @@
 </head>
 <body>
   <h1>Chat.io</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-5">
-        <form id="chat" action="">
-
-          <label for="pseudo">Pseudo <br>
-            <input id="pseudo" type="text">
-          </label> <br>
-
-          <label for="message">Message <br>
-            <input id="message" placeholder="tape ton message ici" type="text">
-          </label> <br>
-
-
-          <input hidden="hidden" type="submit">
-        </form>
-      </div>
-      <div class="col-xs-7">
-        <span id="erreur"></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="col-xs-12">
-      <div id="text-chat"></div>
-    </div>
-  </div>
+  <div id="input"></div>
+  <div id="text-area"></div>
 
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>

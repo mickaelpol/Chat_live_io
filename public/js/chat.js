@@ -2,6 +2,7 @@ $(function(){
 
 	var socket = io();
 
+	// injection de l'input pseudo et message
 	$('#input').html('<div class="container">\
 		<div class="row">\
 		<div class="col-xs-5">\
@@ -25,11 +26,14 @@ $(function(){
 		</div>\
 		</div>');
 
+	// injection dans text-area du message envoyé/recu
 	$('#text-area').html('<div class="container">\
 		<div class="col-xs-12">\
 		<div id="text-chat"></div>\
 		</div>\
 		</div>');
+
+
 
 		var form = $('#chat').submit(function(e){ // recuperer se qui va etre placé dans l'input
 			e.preventDefault()
