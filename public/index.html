@@ -11,9 +11,46 @@
 <body>
 
   <div class="container-fluid bg-gris">
-    <h1 class="text-center page-header">Hello is a mystiich' Chat</h1>
+    <h1 class="text-center page-header">Hello is a mystiichawk's Chat</h1>
   </div>
 
+  <div class="container">
+    <div class="col-xs-4 col-xs-offset-4 backForm">
+
+      <form id="login" class="text-center" action="">
+        <div class="form-group">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" class="pseudo form-control" id="pseudo">
+        </div>
+        <div class="form-group">
+          <input class="bouton" type="submit" hidden="hidden">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <form id="chat">
+      <!-- message envoyé -->
+      <div class="row">
+        <div class="chatBox col-xs-6 col-xs-offset-3">
+          <p id="message"></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- message tapé -->
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-2">
+          <input id="chatMessage" class="chatMessage" type="text">
+        </div>
+        <div class="contourMes col-xs-1">
+          <button class="btn btn-md btn-success" type="submit">envoyer</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
 
 
 
