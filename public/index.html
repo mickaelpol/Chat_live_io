@@ -15,17 +15,24 @@
   </div>
 
   <div id="co" class="container">
-    <div class="col-xs-4 col-xs-offset-4 backForm">
-
-      <form id="login" class="text-center" action="">
-        <div class="form-group">
-          <label for="pseudo">Pseudo</label>
-          <input type="text" class="pseudo form-control" id="pseudo">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4 backForm">
+        <!-- formulaire d'entré dans le chat -->
+        <form id="login" class="text-center" action="">
+          <div class="form-group">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" class="pseudo form-control" id="pseudo">
+          </div>
+          <div class="form-group">
+            <input type="submit" hidden="hidden">
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-5">
+          <div class="erreurPseudo" id="erreurPseudo"></div>
         </div>
-        <div class="form-group">
-          <input type="submit" hidden="hidden">
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 
@@ -42,10 +49,16 @@
       <!-- message tapé -->
       <div class="row">
         <div class="col-xs-6 col-xs-offset-2">
-          <input id="chatMessage" class="chatMessage" type="text">
+          <input autofocus="autofocus" id="chatMessage" class="chatMessage" type="text">
         </div>
         <div class="contourMes col-xs-1">
           <button class="btn btn-md btn-success" type="submit">envoyer</button>
+        </div>
+      </div>
+      <!-- message d'erreur si pas de message entré -->
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-5">
+          <div class="erreurMessage" id="erreurMessage"></div>
         </div>
       </div>
 
