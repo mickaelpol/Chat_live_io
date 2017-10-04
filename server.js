@@ -12,6 +12,10 @@ app.use(express.static('public'));
 //Action sur la connection 
 io.on('connection', function(socket){
 	var userLog;  
+	var min = 1;
+	var max = 100000;
+	var random = Math.floor(Math.random()* (max - min)+ min);
+	var imageUser = '<img class="avatar" src="https://api.adorable.io/avatars/40/'+random+'"/>'+ " ";
 	socket.on('login', function(user){
 		
 		userLog = ent.encode(user);
@@ -20,10 +24,6 @@ io.on('connection', function(socket){
 
 	socket.on('chat message', function(msg){
 		var message = ent.encode(msg);
-		var min = 1;
-		var max = 100000;
-		var random = Math.floor(Math.random()* (max - min)+ min);
-		var imageUser = '<img class="avatar" src="https://api.adorable.io/avatars/40/'+random+'"/>'+ " ";
 		
 		io.emit('message', {message: message, user: imageUser+userLog});
 	});	
